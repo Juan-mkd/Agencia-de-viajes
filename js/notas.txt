@@ -1,0 +1,20 @@
+inicio imagen de fondo, titulo el aldo derecho 
+
+
+
+nosotros    carrucel al lado derecho de imagene de viajes personas felices en vaijes  y texto al lado izquierdo
+
+
+servicios prestacion de alojamiento y viajes  en los diferentes paises
+
+ 
+viajes van los diferentes vaijes y destinos 
+
+alojamiento se muestras la habitaciones en card
+
+
+ofertas se muestra las promociones  con un carrucel que se mueva de lado a lado 
+
+
+conatactos
+ se deja un contacto y un ingreso por si quieren suscribisrse

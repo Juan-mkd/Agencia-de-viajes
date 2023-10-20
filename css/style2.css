@@ -1,0 +1,528 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,400&display=swap');
+
+
+/* variables */
+
+:root{
+    --primary-color:#000;
+    --font-title:45px;
+    --font-p:18px;
+    --family-title: font-family: 'Open Sans', sans-serif;;
+    --family-p: font-family: 'Open Sans', sans-serif;;
+
+}
+
+body{
+    background: hsl(0deg 0% 100%);
+}
+.bg-sena{
+    width: 100%;
+    background: hsl(0deg 0% 100%);
+}
+nav{
+    position: fixed !important;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+nav #navbarNav ul li a{
+    color: #000;
+    padding: 0 20px;
+}
+
+.bg-sena ul li a{
+    color: #0e5d9e;
+    font-size: 15px;
+    position: relative;
+}
+
+.bg-sena ul li a::after{
+    width: 0;
+    height: 2px;
+    background: transparent;
+    content: "";
+    position: absolute;
+    bottom: 2px;
+    left: 20px;
+    transition: .5s;
+}
+.bg-sena ul li a:hover::after{
+    background: rgb(25, 116, 190) ;
+    width: 65%;
+   
+}
+
+.bg-sena div .logo img{
+    width: 100px;
+    height: 70px;
+    margin-left: 0;
+    
+}
+nav.bg-sena ul li.registro:hover{
+    border-bottom: none;
+    
+}
+nav.bg-sena ul li.registro a{
+    display: block;
+    padding: 12px 40px;
+    color: grey;
+    background: #0c629ebf;
+    border-radius: 10px;
+    height: 28px ;
+   
+}
+
+
+
+
+
+
+
+
+#hero {
+    width: 100%;
+    height: 700px;
+    background: url(../nosotros/bg-hero.jpg)no-repeat;
+    background-size: cover;
+    
+}
+#hero h1{
+    color: #ffffff;
+    padding: 180px 25px;
+    font-family: var(--family-title);
+    font-size: 50px;
+    font-weight: 500px;
+}
+#hero h5{
+    color: #ffff;
+    font-weight: 600px;
+    display: flex;
+    margin-top: -100px;
+    font-size: 22px;
+}
+
+
+
+
+#nosotros{
+    width: 100%;
+    position: relative;
+    padding: 150px 0;
+}
+
+#nosotros div h2{
+    color: #000;
+    padding-top: 25px;
+    font-size: var(--font-title);
+    margin-bottom: 80PX;
+    margin-right: 100px;
+    margin-left: 80px;
+    font-family: var(--family-title);
+    display: flex;
+    text-align: center;
+
+}
+
+#nosotros div p{
+    color: #000;
+    font-size: 18px;
+    margin-left: 40px;
+    font-family: var(--family-p);
+}
+
+#nosotros a{
+    padding: 14px 40px;
+    background:  rgb(14, 106, 159);
+    color: #ffff;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    display: block;
+    margin-top: 100px;
+    max-width: 200px;
+    transition: .5s;
+    border-radius: 8px;
+    margin-left: 150px;
+}
+
+#nosotros a:hover{
+    background: black;
+    border-radius: 90px;
+    /* max-width: 250px; */
+    transform: translateY(-40px);
+    border: 5px solid rgb(17, 86, 197);
+}
+#nosotros div.our img{
+    width: 200px;
+}
+
+/* slaider  */
+
+.slider{
+    position: relative;
+    width: 100%;
+    height: 150px;
+    transform-style: preserve-3d;
+    animation: rotate 30s linear infinite;
+    margin-top: 170px ;
+    margin-left:150px;
+    max-width: 80%;
+    /* display: flex; */
+    margin-right: 100px;
+}
+@keyframes rotate{
+    0% {
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100%{
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+.slider span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i)*45deg)) translateZ(280px);
+}
+.slider span img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    transition: 2s;
+}
+.slider span:hover img{
+    transform: translateY(-50px) scale(1.2);
+}
+
+
+
+
+
+
+
+/* servicios */
+
+#servicios{
+    width: 100%;
+    padding: 120px 0;
+}
+#servicios .foto{
+    margin-top: 120px;
+}
+#servicios .foto img{
+    width: 80%;
+    z-index: 3;
+    position: relative;
+}
+#servicios .foto {
+    position: relative;
+}
+#servicios .foto::before{
+    width: 100%;
+    height: 100%;
+    content: "";
+    position: absolute;
+    top:-40px;
+    left: -40px;
+    background: hsla(180, 2%, 60%, 0.315);
+    width: 80%;
+    z-index: 1;
+    
+}
+
+#servicios .info{
+    padding-left:45px;
+    margin-top: -15px;
+}
+#servicios div h2{
+    width: 100%;
+    color: #000;
+    padding-top: 15px;
+    font-size: var(--font-title);
+    margin-bottom: 30PX;
+    margin-right: 100px;
+    margin-left: 80px;
+    font-family: var(--family-title);
+    margin-top: 80px;
+
+}
+#servicios div.info h6{
+    margin-top: 80px;
+    color: #000;
+    font-size: var(--family-p);
+    font-family: var(--family-p);
+    margin-bottom: 50px;
+    line-height: 1.5;
+    width: 100%;
+}
+
+
+/* viajes */
+#viajes{
+    width: 100%;
+    position: relative;
+    padding: 100px 0;
+
+    
+}
+
+#viajes .card{
+    width: 500px;
+    height: 500px;
+    margin-bottom: 90px;
+    border-radius: 10px;
+    justify-content: space-between;
+    padding: 25px;
+    background: rgba(134, 133, 133, 0.404);
+}
+
+#viajes h2{
+    color: #000;
+    font-size: 36px;
+    display: inline-block;
+    margin-bottom: 80px;
+    font-family: var(--family-title);
+    
+}
+
+
+
+
+
+#viajes div p{
+    color: #000;
+    font-size: 14px;
+    font-family: var(--family-p);
+}
+#viajes div h4{
+    padding: 0;
+    display: flex;
+    justify-content: start;
+    margin-top: 10px;
+    font-size: var(--font-p);
+    font-family: var(--family-title);
+   
+
+   
+}
+#viajes .card div h6{
+    display: flex;
+    justify-content: end;
+    margin-top: -30px;
+    font-size: 16px;
+    font-family: var(--family-title);
+    
+}
+
+#viajes .card:hover{
+    transform: translateY(-20px); 
+    cursor: pointer;
+}
+
+
+
+
+
+/* alojamientos */
+
+#alojamientos h2{
+    color: #000;
+    font-size: 36px;
+    display: inline-block;
+    margin-bottom: 80px;
+    font-family: var(--family-title);
+    margin-top: 100px;
+   
+    
+}
+
+#alojamientos .card-alojamiento{
+   margin-bottom: 60px;
+}
+#alojamientos .card-alojamiento .card{
+   margin: 2px 30px;
+   height: 450px;
+}
+
+
+#alojamientos .card-alojamiento div img{
+    max-width: 100%;
+    max-height: 200px;
+}
+
+#alojamientos .card p{
+    color: #000;
+    font-family: var(--family-p);
+}
+#alojamientos .card h5{
+    color: #000;
+    justify-content: center;
+    font-family: var(--family-title);
+}
+#alojamientos h2{
+    color: #000;
+    margin-bottom: 120px;
+    font-family: var(--family-title);
+}
+
+
+
+
+
+/* promociones */
+#promociones {
+    width: 100%;
+    margin-top: 180px;
+    margin-bottom: 0px;
+   
+    padding: 120px;
+}
+#promociones .div1{
+    border-radius: 35px;
+    padding: 25px; 
+    
+}
+
+#promociones h3{
+    text-align: center;
+    margin-bottom: 90px;
+}
+#promociones .div1 img{
+    padding: 15px 10px;
+    width: 100%;
+    height: 300px; 
+}
+#promociones .div1 h4{
+    font-size: 20px;
+    margin: 20px 10px;
+}
+#promociones .div1 button{
+    display: flex;
+    margin-top: 15px;
+    padding: 5px;
+    align-items: center;
+    color: #fff;
+    background: blue;
+    border-radius: 5px;
+}
+
+
+/* comentarios */
+#comentarios .coments{
+    background: #0b7a9ccf;
+    line-height: 1.5;
+}
+#comentarios div img{
+    width: 100%;
+    margin-left: 25px;
+}
+
+
+/* contactos */
+
+#contacto{
+    width: 100%;
+    position: relative;
+    padding: 80px  0;
+    margin-top: 100px;
+    background: url(../img/contactos.jpg)no-repeat;
+    background-size: cover;
+    
+
+}
+#contacto p{
+    
+    padding-top: 20px;
+    color: #ffffff;
+    font-size: var(--font-p);
+}
+#contacto h3{
+    padding-top: 35px 50px;
+    color: #fff;
+    
+    
+    
+}
+#contacto div label{
+    color: #ffffff;
+    font-size: 18px;
+}
+
+footer{
+    background: #0b7a9ccf;
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+}
+
+
+
+
+
+
+/* responsive  */
+@media screen and (min-width:320px) and (max-width:990px){
+   
+   
+    #navbarNav ul li.registro a{
+        display: inline-block;
+        margin-left: 15px;
+    }
+    .bg-sena ul li a:hover::after{
+        width: 20%;
+    }
+    
+    
+.slider{
+    position: relative;
+    width: 80%;
+    height: 150px;
+    transform-style: preserve-3d;
+    animation: rotate 30s linear infinite;
+    margin-top: 170px ;
+    margin-left:100px;
+    max-width: 100%;
+    /* display: flex; */
+  
+}
+
+.slider span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i)*45deg)) translateZ(240px);
+}#viajes .card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 100px;
+    margin-top: 90px;
+}#alojamientos .card-alojamiento .card{
+    align-items: center;
+    margin-left: 90px;
+}#promociones .div1{
+    display: block;
+    margin-top: 50px;
+}#comentarios div img{
+    width: 100%;
+    border: 3px solid green;
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+}
